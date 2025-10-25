@@ -5,167 +5,291 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arnav Verma | Sustainability & ESG Professional</title>
     <style>
-        :root { --color-dark-green:#194d43; --color-teal:#219080; --color-charcoal:#232d2b; --color-cream:#f9f9f6; --color-highlight:#40c4b7; }
-        body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; background:var(--color-dark-green); color:var(--color-cream); }
-        header { background:var(--color-charcoal); display:flex; align-items:center; padding:1.2rem 2rem; }
-        .logo { font-family:'Brush Script MT',cursive; font-size:2rem; font-weight:600; color:var(--color-highlight); letter-spacing:1px; }
-        nav { margin-left:auto; }
-        nav ul { list-style:none; display:flex; gap:2rem; }
-        nav a { color:var(--color-cream); text-decoration:none; font-weight:500; transition:color .2s; }
-        nav a:hover { color:var(--color-highlight); }
-        .cover-art { width:100%; display:block; margin:2rem auto; border-radius:15px; max-width:1100px; }
-        .hero { text-align:center; margin-bottom:2rem; }
-        .hero h1 { font-size:3rem; font-weight:700; margin-bottom:1rem; }
-        .hero .subtitle { color:var(--color-highlight); font-size:1.5rem; font-weight:500; }
-        .hero .tagline { max-width:600px; margin:1.2rem auto 2rem; color:var(--color-cream); font-size:1.2rem; }
-        .btn-main,.btn-outline { padding:.8rem 2rem; font-size:1rem; border-radius:6px; font-weight:600; cursor:pointer; margin:.5rem; transition:background .2s,color .2s; }
-        .btn-main { background:var(--color-highlight); color:var(--color-charcoal); border:none; }
-        .btn-main:hover { background:#54eadd; }
-        .btn-outline { background:none; border:2px solid var(--color-highlight); color:var(--color-highlight); }
-        .btn-outline:hover { background:var(--color-highlight); color:var(--color-charcoal); }
-        section { margin:3rem auto; padding:2rem 0; max-width:1050px; }
-        h2 { font-size:2.3rem; margin-bottom:1.2rem; text-align:left; color:var(--color-highlight); }
-        .section-divider { border-bottom:1px solid var(--color-teal); margin:2.5rem 0; }
-        .about-content { font-size:1.1rem; line-height:1.8; background:rgba(34,77,67,.4); padding:1.5rem; border-radius:13px; margin-bottom:2rem; }
-        .experience-list,.education-list,.project-list,.award-list,.skills-list,.interests-list { display:flex; flex-direction:column; gap:1.5rem; }
-        .exp-block,.edu-block,.proj-block,.award-block,.skill-block,.interest-block { background:var(--color-charcoal); padding:1.2rem 1rem; border-radius:9px; cursor:pointer; transition:box-shadow .2s; }
-        .exp-block:hover,.edu-block:hover,.proj-block:hover,.award-block:hover,.skill-block:hover,.interest-block:hover { box-shadow:0 2px 10px #40c4b777; }
-        .block-title { font-size:1.16rem; color:var(--color-highlight); font-weight:700; margin-bottom:.3rem; }
-        .block-meta { font-size:.97rem; color:var(--color-cream); margin-bottom:.6rem; }
-        .block-desc { font-size:1.02rem; color:#e6e6e6; }
-        .art-icons { display:flex; justify-content:space-between; align-items:center; background:#183f37; border-radius:11px; margin:2rem auto 0; padding:2.2rem .2rem; max-width:900px; }
-        .art-icon { flex:1; text-align:center; color:var(--color-highlight); }
-        .art-icon img { width:85px; height:85px; margin-bottom:.7rem; }
-        .art-label { font-size:1rem; font-weight:600; color:var(--color-cream); }
-        .contact-section { text-align:center; padding-bottom:2.5rem; }
-        .contact-links { display:flex; justify-content:center; gap:2.5rem; margin:2rem 0; }
-        .contact-link { color:var(--color-highlight); background:#183f37; padding:1rem 1.8rem; border-radius:8px; font-size:1.15rem; font-weight:600; text-decoration:none; box-shadow:0 1px 8px #235b4f66; transition:background .2s; }
-        .contact-link:hover { background:var(--color-teal); color:var(--color-charcoal); }
-        footer { background:var(--color-charcoal); color:#aacbc6; font-size:1.05rem; text-align:center; padding:2rem 0; margin-top:3rem; }
-        @media (max-width:900px){ section{padding:1rem .5rem;} .art-icons{padding:1.2rem 0;} }
-        @media (max-width:650px){ header,.cover-art,.hero,section{padding:1rem .2rem;} .hero h1{font-size:2.1rem;} h2{font-size:1.35rem;} }
+        :root {
+            --color-navy: #0a1628;
+            --color-blue: #1e3a8a;
+            --color-teal: #14b8a6;
+            --color-turquoise: #06b6d4;
+            --color-light: #f0f9ff;
+            --color-highlight: #22d3ee;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-blue) 100%);
+            color: var(--color-light);
+            line-height: 1.6;
+        }
+        header {
+            background: rgba(10, 22, 40, 0.95);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-highlight);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        nav a {
+            color: var(--color-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: var(--color-highlight); }
+        .banner {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+        .hero {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--color-teal);
+            object-fit: cover;
+            box-shadow: 0 4px 20px rgba(34, 211, 238, 0.3);
+        }
+        .hero-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-light);
+        }
+        .hero .subtitle {
+            color: var(--color-turquoise);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 0.8rem 2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        .btn-primary {
+            background: var(--color-teal);
+            color: white;
+            border: none;
+        }
+        .btn-primary:hover {
+            background: var(--color-turquoise);
+            transform: translateY(-2px);
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--color-turquoise);
+            border: 2px solid var(--color-turquoise);
+        }
+        .btn-outline:hover {
+            background: var(--color-turquoise);
+            color: var(--color-navy);
+        }
+        section {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+        h2 {
+            font-size: 2.5rem;
+            color: var(--color-highlight);
+            margin-bottom: 2rem;
+            border-bottom: 3px solid var(--color-teal);
+            padding-bottom: 0.5rem;
+        }
+        .about-content {
+            background: rgba(20, 184, 166, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--color-teal);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        .content-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .card {
+            background: rgba(30, 58, 138, 0.5);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--color-turquoise);
+            transition: all 0.3s;
+        }
+        .card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 4px 20px rgba(34, 211, 238, 0.2);
+        }
+        .card-title {
+            font-size: 1.3rem;
+            color: var(--color-highlight);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .card-meta {
+            color: var(--color-turquoise);
+            font-size: 0.95rem;
+            margin-bottom: 0.8rem;
+        }
+        .card-desc {
+            color: var(--color-light);
+            line-height: 1.6;
+        }
+        footer {
+            background: rgba(10, 22, 40, 0.95);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            color: var(--color-light);
+        }
+        @media (max-width: 768px) {
+            .hero { flex-direction: column; text-align: center; }
+            .hero h1 { font-size: 2rem; }
+            h2 { font-size: 2rem; }
+        }
     </style>
 </head>
 <body>
-<header>
-  <div class="logo">Arnav Verma</div>
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#awards">Awards & Certifications</a></li>
-      <li><a href="#avroom">AV Room</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-<img src="LinkedIn-Cover-Image.jpg" class="cover-art" alt="LinkedIn Cover Art">
-<section class="hero">
-  <h1>Arnav Verma</h1>
-  <div class="subtitle">MSc Sustainability Transformation | ESSEC Business School</div>
-  <div class="tagline">Driving sustainability transformation and ESG innovation through data, analysis, and values-based leadership.</div>
-  <a class="btn-main" href="Arnav-Verma-Resume-Oct-2025.pdf" target="_blank">Download CV</a>
-  <a class="btn-outline" href="#contact">Get in Touch</a>
-</section>
-<div class="art-icons">
-  <div class="art-icon"><img src="icon1.png" alt="Balance Icon"><div class="art-label">BALANCE</div></div>
-  <div class="art-icon"><img src="icon2.png" alt="Tree of Life"><div class="art-label">RESILIENCE</div></div>
-  <div class="art-icon"><img src="icon3.png" alt="Knot"><div class="art-label">RESILIENCE</div></div>
-  <div class="art-icon"><img src="icon4.png" alt="Yin Yang"><div class="art-label">BALANCE</div></div>
-  <div class="art-icon"><img src="icon5.png" alt="Growth Mandala"><div class="art-label">GROWTH</div></div>
-</div>
-<section id="about">
-  <h2>About</h2>
-  <div class="about-content">
-    <p>As a society, we have perceived progress as constant forward and upward growth, yet our current path has pushed us beyond several planetary boundaries, risking irreversible ecological damage. It is imperative that economies must no longer pursue boundless growth but rather aim to thrive within a safe and just space that enables balance between human needs and planetary health, giving way to the concept of doughnut economics, developed by Kate Raworth.</p>
-    <p>Inspired by this shift in thinking, I am currently pursuing an MSc in Sustainability Transformation at ESSEC Business School, actively building expertise and experience in the field of sustainability and ESG. Highly organized, adaptable, and resilient, I possess hands-on experience in sustainability services, with exposure to impact and materiality frameworks, benchmarking, and ESG rating methodologies.</p>
-    <p>Motivated by a desire to deepen my analytical and sector-specific knowledge, I am seeking entry-level roles in sustainability or ESG where I can contribute to impactful projects, advance my technical skills and collaborate across sectors. I am particularly interested in opportunities where I can gain exposure to:</p>
-    <ul>
-      <li>ESG consulting or analysis</li>
-      <li>Sustainability reporting and disclosure</li>
-      <li>ESG finance</li>
-      <li>Climate-focused asset management and responsible investment regulation</li>
-      <li>Policy engagement or systems mapping</li>
-    </ul>
-    <p>Proficient in key data analysis tools such as Bloomberg Terminal and S&P Capital IQ for ESG and financial data analysis. Experienced with statistical software such as SPSS and Stata, and programming languages R and SQL, used for large-scale data processing, quantitative modeling, and scenario analysis.</p>
-    <p>I welcome connections from professionals engaged in climate and sustainability initiatives or those interested in developing a values-driven team.</p>
-  </div>
-</section>
-<section id="experience">
-  <h2>Experience</h2>
-  <div class="experience-list">
-    <div class="exp-block" onclick="window.open('exp-tata.html','_blank')">
-      <div class="block-title">Tata Communications — ESG Due Diligence Analyst</div>
-      <div class="block-meta">July 2025 – Sep 2025</div>
-      <div class="block-desc">Conducted ESG due diligence for cross-border projects. Benchmarked performance with GRI, BRSR, TCFD. Delivered sector analysis with Excel and PowerPoint. Supported responsible investing goals.</div>
-    </div>
-    <div class="exp-block" onclick="window.open('exp-ey.html','_blank')">
-      <div class="block-title">EY (Ernst & Young) — ESG & Climate Intern</div>
-      <div class="block-meta">June 2024 – Aug 2024</div>
-      <div class="block-desc">Assisted clients with ESG frameworks. Led benchmarking and analysis. Provided materiality reporting support, ESG disclosure, and regulatory compliance recommendations.</div>
-    </div>
-    <div class="exp-block" onclick="window.open('exp-makemytrip.html','_blank')">
-      <div class="block-title">MakemyTrip — Senior Financial Analyst</div>
-      <div class="block-meta">July 2023 – Sep 2023</div>
-      <div class="block-desc">Built financial models and provided scenario analysis. Worked with data management software and advanced Excel for project evaluation.</div>
-    </div>
-  </div>
-</section>
-<section id="education">
-  <h2>Education</h2>
-  <div class="education-list">
-    <div class="edu-block" onclick="window.open('edu-edinburgh.html','_blank')">
-      <div class="block-title">University of Edinburgh — MA (Hons) Business Management</div>
-      <div class="block-meta">Sep 2021 – July 2025</div>
-      <div class="block-desc">Graduated with Honours. Dissertation: "ESG Disclosure & Corporate Financial Performance in Indian Companies".</div>
-    </div>
-    <div class="edu-block" onclick="window.open('edu-essec.html','_blank')">
-      <div class="block-title">ESSEC Business School — MSc Sustainability Transformation</div>
-      <div class="block-meta">2025 – Present</div>
-      <div class="block-desc">Advanced coursework in corporate sustainability, ESG, green finance, and climate-risk analysis.</div>
-    </div>
-  </div>
-</section>
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="project-list">
-    <div class="proj-block" onclick="window.open('dissertation.html','_blank')">
-      <div class="block-title">Dissertation: ESG Disclosure & Corporate Financial Performance</div>
-      <div class="block-desc">Researched the effect of ESG disclosure on financial results in listed Indian firms, using statistical modeling and data sources such as Bloomberg and Capital IQ.</div>
-    </div>
-    <div class="proj-block" onclick="window.open('eutic.html','_blank')">
-      <div class="block-title">EUTIC Project — Senior Financial Analyst</div>
-      <div class="block-desc">Financial analysis and scenario evaluation for digital infrastructure projects across international markets.</div>
-    </div>
-  </div>
-</section>
-<section id="awards">
-  <h2>Awards & Certifications</h2>
-  <div class="award-list">
-    <div class="award-block"><div class="block-title">Task by Sullitest</div><div class="block-desc">International sustainability knowledge certification</div></div>
-    <div class="award-block"><div class="block-title">Edinburgh Award for Effective Responsible Leadership</div><div class="block-desc">Recognized for impact-driven leadership and team development</div></div>
-    <div class="award-block"><div class="block-title">Professional Development & Coaching Leader</div><div class="block-desc">Coached peers for academic and professional excellence</div></div>
-  </div>
-</section>
-<section id="avroom">
-  <h2>AV Room — Interests</h2>
-  <div class="interests-list">
-    <div class="interest-block"><div class="block-title">Football</div><div class="block-desc">Passionate about football analysis, following leagues, and community play.</div></div>
-    <div class="interest-block"><div class="block-title">Photography</div><div class="block-desc">Enjoys creative and landscape photography; sharing stories through visuals.</div></div>
-    <div class="interest-block"><div class="block-title">Trading & Investing</div><div class="block-desc">Enthusiast in equity trading, value investing, and financial market dynamics.</div></div>
-    <div class="interest-block"><div class="block-title">Podcasts & Technology</div><div class="block-desc">Regular listener of tech innovation, business, and climate podcasts.</div></div>
-  </div>
-</section>
-<section id="contact" class="contact-section">
-  <h2>Contact</h2>
-  <div class="contact-links">
-    <a class="contact-link" href="mailto:arnaverma07@gmail.com">arnaverma07@gmail.com</a>
-    <a class="contact-link" href="https://www.linkedin.com/in/arnav-verma-270674239/" target="_blank">LinkedIn</a>
-    <span class="contact-link">Cergy (Paris area)</span>
-  </div>
-</section>
-<footer>&copy; 2025 Arnav Verma. All rights reserved.</footer>
+    <header>
+        <nav>
+            <div class="logo">Arnav Verma</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <img src="LinkedIn Cover Image.png" alt="Banner" class="banner">
+
+    <section class="hero">
+        <img src="IMG_0738.pdf" alt="Arnav Verma" class="profile-photo">
+        <div class="hero-content">
+            <h1>Arnav Verma</h1>
+            <p class="subtitle">Sustainability & ESG Professional</p>
+            <div class="hero-buttons">
+                <a href="Arnav Verma Resume Oct 2025.pdf" class="btn btn-primary" download>Download CV</a>
+                <a href="#contact" class="btn btn-outline">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p>I am a sustainability and ESG professional passionate about driving corporate responsibility and sustainable transformation. With a strong foundation in business management from the University of Edinburgh and ongoing studies in Sustainability Transformation at ESSEC Business School, I bring analytical rigor and strategic thinking to address complex environmental and social challenges.</p>
+            <p style="margin-top: 1rem;">My experience spans ESG analysis, corporate sustainability strategy, and financial modeling. I am committed to creating measurable impact through data-driven insights and collaborative leadership.</p>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="content-grid">
+            <div class="card">
+                <div class="card-title">ERM — ESG Associate</div>
+                <div class="card-meta">September 2024 – Present | Paris, France</div>
+                <div class="card-desc">Supporting ESG advisory projects, conducting sustainability assessments, and developing strategies for corporate clients to improve environmental and social performance.</div>
+            </div>
+            <div class="card">
+                <div class="card-title">RSM UK — Sustainability Analyst Intern</div>
+                <div class="card-meta">June 2024 – August 2024 | London, UK</div>
+                <div class="card-desc">Conducted ESG data analysis, assisted with sustainability reporting frameworks (GRI, SASB), and contributed to client deliverables on carbon footprint reduction strategies.</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Hines — Sustainability Research Intern</div>
+                <div class="card-meta">January 2024 – May 2024 | Edinburgh, UK</div>
+                <div class="card-desc">Researched sustainable real estate practices, analyzed green building certifications, and supported ESG integration in investment decisions.</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="content-grid">
+            <div class="card">
+                <div class="card-title">ESSEC Business School — MSc Sustainability Transformation</div>
+                <div class="card-meta">2025 – Present | Cergy, France</div>
+                <div class="card-desc">Advanced coursework in corporate sustainability, ESG frameworks, green finance, climate risk analysis, and circular economy principles.</div>
+            </div>
+            <div class="card">
+                <div class="card-title">University of Edinburgh — MA (Hons) Business Management</div>
+                <div class="card-meta">September 2021 – July 2025 | Edinburgh, UK</div>
+                <div class="card-desc">Graduated with Honours. Dissertation: "ESG Disclosure & Corporate Financial Performance in Indian Companies" — Research on the relationship between ESG transparency and financial outcomes using Bloomberg and Capital IQ data.</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects & Certifications</h2>
+        <div class="content-grid">
+            <div class="card">
+                <div class="card-title">Dissertation: ESG Disclosure & Corporate Financial Performance</div>
+                <div class="card-desc">Investigated the impact of ESG disclosure on financial performance among publicly listed Indian companies using statistical modeling and comprehensive financial databases.</div>
+            </div>
+            <div class="card">
+                <div class="card-title">EUTIC Project — Senior Financial Analyst</div>
+                <div class="card-desc">Led financial analysis and scenario planning for digital infrastructure projects across multiple international markets.</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Sulitest Certification</div>
+                <div class="card-desc">International sustainability literacy certification demonstrating comprehensive knowledge of sustainable development principles.</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Edinburgh Award for Effective Responsible Leadership</div>
+                <div class="card-desc">Recognized for demonstrating impact-driven leadership, team development, and commitment to responsible business practices.</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="about-content" style="text-align: center;">
+            <p><strong>Email:</strong> <a href="mailto:arnaverma07@gmail.com" style="color: var(--color-highlight);">arnaverma07@gmail.com</a></p>
+            <p style="margin-top: 1rem;"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/arnav-verma-270674239/" target="_blank" style="color: var(--color-highlight);">linkedin.com/in/arnav-verma</a></p>
+            <p style="margin-top: 1rem;"><strong>Location:</strong> Cergy (Paris area), France</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Arnav Verma. All rights reserved.</p>
+    </footer>
 </body>
-</html>o
+</html>
