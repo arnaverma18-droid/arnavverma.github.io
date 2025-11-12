@@ -50,6 +50,9 @@
     .card-desc { color: var(--light); line-height: 1.6; }
     .card-desc ul { margin-left: 1.25rem; }
     footer { background: rgba(10,10,10,0.95); text-align: center; padding: 2rem; margin-top: 4rem; color: var(--light); }
+        .load-more { text-align: center; margin-top: 2rem; }
+    .load-more-btn { display: inline-block; padding: 0.8rem 2rem; background: var(--teal); color: #0a0a0a; text-decoration: none; border-radius: 6px; font-weight: 600; transition: all 0.3s; }
+    .load-more-btn:hover { background: var(--turquoise); transform: translateY(-2px); box-shadow: 0 4px 15px rgba(32,217,210,0.4); }
     @media (max-width: 768px) { .hero { flex-direction: column; text-align: center; } .hero h1 { font-size: 2rem; } h2 { font-size: 2rem; } }
   </style>
 </head>
@@ -294,6 +297,12 @@ Developed the ability to assess energy sources through environmental, economic, 
           </ul>
         </div>
       </div>
+
+        <!-- Load More Projects Button -->
+    <div class="load-more">
+      <a href="projects.html" class="load-more-btn">Load More Projects</a>
+    </div>
+  </div>
     </div>
   </section>
 
