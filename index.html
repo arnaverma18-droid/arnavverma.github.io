@@ -218,6 +218,35 @@
             h2 { font-size: 1.3rem; }
             .hero-container { padding: 2rem; }
         }
+
+                .glass-button {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        
+        .glass-button span:first-child {
+            font-size: 2em;
+            margin-bottom: 0.5rem;
+        }
+        
+        .glass-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+        }
     </style>
 </head>
 <body>
@@ -458,11 +487,24 @@
     </section>
     
     <section id="contact">
-        <h2>Contact</h2>
-        <div class="about-content" style="text-align: center;">
-            <p>Email: <a href="mailto:arnaverma07@gmail.com" style="color: var(--highlight);">arnaverma07@gmail.com</a></p>
-            <p style="margin-top: 1rem;">LinkedIn: <a href="https://www.linkedin.com/in/arnav-verma-270674239/" target="_blank" style="color: var(--highlight);">https://www.linkedin.com/in/arnav-verma-270674239/</a></p>
-            <p style="margin-top: 1rem;">Location: Cergy (Paris area), France</p>
+        <h2 style="font-size: 2.5em; margin-bottom: 1rem; text-align: center;">Let's Get in Touch!</h2>
+        <div class="contact-buttons" style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; max-width: 600px; margin: 0 auto;">
+            <a href="mailto:arnaverma07@gmail.com" class="glass-button" style="text-decoration: none;">
+                <span>✉️</span>
+                <span>Mail</span>
+            </a>
+            <a href="https://www.linkedin.com/in/arnav-verma-270674239/" target="_blank" class="glass-button" style="text-decoration: none;">
+                <span>💼</span>
+                <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/arnaverma18-droid" target="_blank" class="glass-button" style="text-decoration: none;">
+                <span>💻</span>
+                <span>GitHub</span>
+            </a>
+            <a href="#" class="glass-button" style="text-decoration: none;">
+                <span>📄</span>
+                <span>Download Resume</span>
+            </a>
         </div>
     </section>
     
