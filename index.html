@@ -1,321 +1,488 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-  <meta charset='utf-8'/>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
-  <title>Arnav Verma | Sustainability and ESG Professional</title>
-  <style>
-    :root {
-      --navy: #0a0a0a;
-      --blue: #1a1a1a;
-      --teal: #20d9d2;
-      --turquoise: #20d9d2;
-      --light: #f5f5f5;
-      --highlight: #20d9d2;
-    }
+    <meta charset='utf-8'/>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+    <title>Arnav Verma | Sustainability and ESG Professional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0a0a0a;
+            --blue: #1a1a1a;
+            --teal: #20d9d2;
+            --turquoise: #20d9d2;
+            --light: #f5f5f5;
+            --highlight: #20d9d2;
+        }
+        
         @keyframes gradientShift {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: linear-gradient(135deg, #0a0a0a 0%, #0a0a0a 25%, #0d2626 50%, #116466 75%, #0d2626 100%);
-    background-attachment: fixed;
-    animation: gradientShift 15s ease infinite;      line-height: 1.6;
-      font-size: 0.98rem;
-    }
-    header { background: linear-gradient(135deg, rgba(15,23,42,0.98) 0%, rgba(19,78,74,0.98) 50%, rgba(21,94,117,0.98) 100%); padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.3); display: flex; justify-content: center; }  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  background: rgba(32,217,210,0.1); 
-  padding: 1rem 2rem; 
-  border-radius: 50px; 
-  border: 2px solid var(--turquoise); 
-}
-    .logo { font-size: 1.5rem; font-weight: 700; color: var(--highlight); }
-    nav ul { list-style: none; display: flex; gap: 2rem; border: 2px solid var(--turquoise); padding: 1rem 2rem; border-radius: 50px; background: transparent; }    nav a { color: var(--light); text-decoration: none; font-weight: 500; transition: color 0.3s; }
-    nav a:hover { color: var(--highlight); }
-    .banner { width: 100%; max-height: 400px; object-fit: cover; display: block; }
-    .hero { max-width: 1200px; margin: 3rem auto; padding: 0 2rem; display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
-    .profile-photo { width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--teal); object-fit: cover; box-shadow: 0 4px 20px rgba(32,217,210,0.3); }
-    .hero-content { flex: 1; min-width: 300px; }
-    .hero h1 { font-size: 2.1rem; margin-bottom: 0.5rem; color: var(--light); }
-    .hero .subtitle { color: var(--turquoise); font-size: 1.5rem; margin-bottom: 1.5rem; }
-    .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .btn { padding: 0.8rem 2rem; border-radius: 6px; font-weight: 600; text-decoration: none; transition: all 0.3s; display: inline-block; }
-    .btn-primary { background: var(--teal); color: #0a0a0a; border: none; }
-    .btn-primary:hover { background: var(--turquoise); transform: translateY(-2px); }
-    .btn-outline { background: transparent; color: var(--turquoise); border: 2px solid var(--turquoise); }
-    .btn-outline:hover { background: var(--turquoise); color: var(--navy); }
-    section { max-width: 1200px; margin: 3rem auto; padding: 0 2rem; }
-    h2 { font-size: 1.5rem; color: var(--highlight); margin-bottom: 2rem; border-bottom: 3px solid var(--teal); padding-bottom: 0.5rem; }
-    .about-content { background: rgba(32,217,210,0.1); padding: 2rem; border-radius: 10px; border-left: 4px solid var(--teal); font-size: 1.1rem; line-height: 1.8; color: var(--light); }    .content-grid { display: flex; flex-direction: column; gap: 1.5rem; }
-    .card { background: rgba(26,26,26,0.5); padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--turquoise); transition: all 0.3s; }
-    .card:hover { transform: translateX(10px); box-shadow: 0 4px 20px rgba(32,217,210,0.2); }
-    .card-title { font-size: 1.05rem; color: var(--highlight); font-weight: 700; margin-bottom: 0.5rem; }
-    .card-meta { color: var(--turquoise); font-size: 0.95rem; margin-bottom: 0.8rem; }
-    .card-desc { color: var(--light); line-height: 1.6; }
-    .card-desc ul { margin-left: 1.25rem; }
-    footer { background: linear-gradient(135deg, rgba(15,23,42,0.98) 0%, rgba(19,78,74,0.98) 50%, rgba(21,94,117,0.98) 100%); text-align: center; padding: 2rem; margin-top: 4rem; color: var(--light); }        .load-more { text-align: center; margin-top: 2rem; }
-    .load-more-btn { display: inline-block; padding: 0.8rem 2rem; background: var(--teal); color: #0a0a0a; text-decoration: none; border-radius: 6px; font-weight: 600; transition: all 0.3s; }
-    .load-more-btn:hover { background: var(--turquoise); transform: translateY(-2px); box-shadow: 0 4px 15px rgba(32,217,210,0.4); }
-    @media (max-width: 768px) { .hero { flex-direction: column; text-align: center; } .hero h1 { font-size: 2rem; } h2 { font-size: 2rem; } }
-  </style>
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #0a0a0a 15%, #0d2626 40%, #116466 70%, #20d9d2 100%);
+            background-size: 400% 400%;
+            background-attachment: fixed;
+            animation: gradientShift 15s ease infinite;
+            line-height: 1.6;
+            font-size: 0.98rem;
+        }
+        
+        header {
+            background: linear-gradient(135deg, rgba(15,23,42,0.98) 0%, rgba(19,78,74,0.98) 50%, rgba(21,94,117,0.98) 100%);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid var(--turquoise);
+            transition: all 0.3s ease;
+        }
+        
+        header.scrolled {
+            backdrop-filter: blur(10px);
+            background: rgba(32, 217, 210, 0.15);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--highlight); }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            border: 2px solid var(--turquoise);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            background: transparent;
+        }
+        
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover { color: var(--highlight); }
+        
+        .hero {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .hero-container {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(15px);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(32, 217, 210, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+        
+        .profile-photo-placeholder {
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(32, 217, 210, 0.3), rgba(17, 100, 102, 0.3));
+            border: 4px solid var(--teal);
+            margin: 0 auto 2rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--turquoise);
+            font-size: 3rem;
+            font-weight: 700;
+            box-shadow: 0 4px 20px rgba(32, 217, 210, 0.4);
+        }
+        
+        .hero h1 {
+            font-family: 'Satisfy', cursive;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--light);
+            font-weight: 400;
+        }
+        
+        .hero-description {
+            color: var(--light);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+        
+        section {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            color: var(--highlight);
+            margin-bottom: 2rem;
+            border-bottom: 3px solid var(--teal);
+            padding-bottom: 0.5rem;
+        }
+        
+        .about-content {
+            background: rgba(32, 217, 210, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--teal);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--light);
+        }
+        
+        .content-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .card {
+            background: rgba(26, 26, 26, 0.5);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--turquoise);
+            transition: all 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 4px 20px rgba(32, 217, 210, 0.2);
+        }
+        
+        .card-title {
+            font-size: 1.05rem;
+            color: var(--highlight);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .card-meta {
+            color: var(--turquoise);
+            font-size: 0.95rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .card-desc {
+            color: var(--light);
+            line-height: 1.6;
+        }
+        
+        .card-desc ul { margin-left: 1.25rem; }
+        
+        footer {
+            background: linear-gradient(135deg, rgba(15,23,42,0.98) 0%, rgba(19,78,74,0.98) 50%, rgba(21,94,117,0.98) 100%);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            color: var(--light);
+        }
+        
+        .load-more { text-align: center; margin-top: 2rem; }
+        
+        .load-more-btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: var(--teal);
+            color: #0a0a0a;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .load-more-btn:hover {
+            background: var(--turquoise);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(32, 217, 210, 0.4);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.3rem; }
+            .hero-container { padding: 2rem; }
+        }
+    </style>
 </head>
 <body>
-  </div>
-
-  <header>
-    <nav>
-      <div class="logo"AV</div>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-                        <li><a href="articles.html">Articles & News</a></li>
+    <header id="mainHeader">
+        <nav>
+            <div class="logo">AV</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="articles.html">Articles & News</a></li>
                 <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Hi, I am Arnav
-      <p class="subtitle">Sustainability and ESG Professional</p>
-      <div class="hero-buttons">
-        <a class="btn btn-primary" download href="https://drive.google.com/file/d/1cZPuiS7LZhKgp9E9TdMptNZxQq7mxTDt/view">Download CV</a>
-        <a class="btn btn-outline" href="#contact">Get in Touch</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="about-content">
-      <p>
-        As a society, we have perceived progress as constant forward and upward growth, yet our current path has pushed us beyond several planetary boundaries, risking irreversible ecological damage. It is imperative that economies must no longer pursue boundless growth but rather aim to thrive within a safe and just space that enables balance between human needs and planetary health, giving way to the concept of doughnut economics, developed by Kate Raworth.
-    </p>
-      
-  <p>
-        Inspired by this shift in thinking, I am currently pursuing an MSc in Sustainability Transformation at ESSEC Business School, actively building expertise and experience in the field of sustainability and ESG. Highly organized, adaptable, and resilient, I possess hands-on experience in sustainability services, with exposure to impact and materiality frameworks, benchmarking, and ESG rating methodologies.
-   </p>
-      
-  <p>
-        Proficient in key data analysis tools such as Bloomberg Terminal and S&P Capital IQ for ESG and financial data analysis. Experienced with statistical software such as SPSS and Stata, and programming languages R and SQL, used for large-scale data processing, quantitative modeling, and scenario analysis.
-   </p>
-      
-  <p>
-        Motivated by a desire to deepen my analytical and sector-specific knowledge, I am seeking entry-level roles in sustainability or ESG where I can contribute to impactful projects, advance my technical skills and collaborate across sectors. I am particularly interested in opportunities where I can gain exposure to:
-  </p>
-      
-  <ul>
-    <li>ESG consulting or analysis</li>
-    <li>Sustainability reporting and disclosure</li>
-    <li>ESG finance</li>
-    <li>Climate-focused asset management and responsible investment regulation</li>
-    <li>Policy engagement or systems mapping</li>
-  </ul>
-      
-  <p>
-    I welcome connections from professionals engaged in climate and sustainability initiatives or those interested in developing a values-driven team.
-  </p>
-</div>
-  </section>
-
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="content-grid">
-      <div class="card">
-        <div class="card-title">Tata Communications, London — ESG Strategy Intern</div>
-        <div class="card-meta">Jul 2024 - Sep 2024</div>
-        <div class="card-desc">
-          <ul>
-            <li>Coordinated ESG due diligence for DRIVE Week CSR initiatives (UK &amp; Europe).</li>
-          </ul>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-container">
+            <div class="profile-photo-placeholder">AV</div>
+            <h1>Hi, I am Arnav</h1>
+            <p class="hero-description">
+                I am an MSc Sustainability Transformation student at ESSEC Business School, interested in actively building expertise and experience in the field of sustainability and ESG.
+            </p>
         </div>
-      </div>
-
-      <div class="card">
-        <div class="card-title">Ernst &amp; Young (EY), India — Business Consulting Risk Intern</div>
-        <div class="card-meta">Jul 2023 - Aug 2023</div>
-        <div class="card-desc">
-          <ul>
-            <li>Evaluated double-materiality assessments ensuring alignment with reporting standards.</li>
-            <li>Conducted benchmarking and comparative analysis to support client ESG performance evaluations.</li>
-            <li>Assessed Moody’s ESG Ratings methodology and regulatory frameworks (e.g., SEBI, DJIA).</li>
-          </ul>
+    </section>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p>
+                As a society, we have perceived progress as constant forward and upward growth, yet our current path has pushed us beyond several planetary boundaries, risking irreversible ecological damage. It is imperative that economies must no longer pursue boundless growth but rather aim to thrive within a safe and just space that enables balance between human needs and planetary health, giving way to the concept of doughnut economics, developed by Kate Raworth.
+            </p>
+            <br>
+            <p>
+                Inspired by this shift in thinking, I am currently pursuing an MSc in Sustainability Transformation at ESSEC Business School, actively building expertise and experience in the field of sustainability and ESG. Highly organized, adaptable, and resilient, I possess hands-on experience in sustainability services, with exposure to impact and materiality frameworks, benchmarking, and ESG rating methodologies.
+            </p>
+            <br>
+            <p>
+                Proficient in key data analysis tools such as Bloomberg Terminal and S&P Capital IQ for ESG and financial data analysis. Experienced with statistical software such as SPSS and Stata, and programming languages R and SQL, used for large-scale data processing, quantitative modeling, and scenario analysis.
+            </p>
+            <br>
+            <p>
+                Motivated by a desire to deepen my analytical and sector-specific knowledge, I am seeking entry-level roles in sustainability or ESG where I can contribute to impactful projects, advance my technical skills and collaborate across sectors. I am particularly interested in opportunities where I can gain exposure to:
+            </p>
+            <br>
+            <ul>
+                <li>ESG consulting or analysis</li>
+                <li>Sustainability reporting and disclosure</li>
+                <li>ESG finance</li>
+                <li>Climate-focused asset management and responsible investment regulation</li>
+                <li>Policy engagement or systems mapping</li>
+            </ul>
+            <br>
+            <p>
+                I welcome connections from professionals engaged in climate and sustainability initiatives or those interested in developing a values-driven team.
+            </p>
         </div>
-      </div>
-
-      <div class="card">
-        <div class="card-title">MakemyTrip, India — ESG &amp; CSR Development Intern</div>
-        <div class="card-meta">Aug 2022 - Aug 2022</div>
-        <div class="card-desc">
-          <ul>
-            <li>Developed frameworks for sustainable tourism aligned with UNWTO and GSTC criteria.</li>
-            <li>Led sustainable tourism projects to promote carbon-neutral tourism practices.</li>
-            <li>Partnered with 10+ NGOs to align the organisation’s CSR initiatives with sustainability goals.</li>
-          </ul>
+    </section>
+    
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="content-grid">
+            <div class="card">
+                <div class="card-title">Tata Communications, London — ESG Strategy Intern</div>
+                <div class="card-meta">Jul 2024 - Sep 2024</div>
+                <div class="card-desc">
+                    <ul>
+                        <li>Coordinated ESG due diligence for DRIVE Week CSR initiatives (UK & Europe).</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">Ernst & Young (EY), India — Business Consulting Risk Intern</div>
+                <div class="card-meta">Jul 2023 - Aug 2023</div>
+                <div class="card-desc">
+                    <ul>
+                        <li>Evaluated double-materiality assessments ensuring alignment with reporting standards.</li>
+                        <li>Conducted benchmarking and comparative analysis to support client ESG performance evaluations.</li>
+                        <li>Assessed Moody's ESG Ratings methodology and regulatory frameworks (e.g., SEBI, DJIA).</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">MakemyTrip, India — ESG & CSR Development Intern</div>
+                <div class="card-meta">Aug 2022 - Aug 2022</div>
+                <div class="card-desc">
+                    <ul>
+                        <li>Developed frameworks for sustainable tourism aligned with UNWTO and GSTC criteria.</li>
+                        <li>Led sustainable tourism projects to promote carbon-neutral tourism practices.</li>
+                        <li>Partnered with 10+ NGOs to align the organisation's CSR initiatives with sustainability goals.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">Edinburgh University Indian Society — Treasurer</div>
+                <div class="card-meta">Mar 2023 - May 2025</div>
+                <div class="card-desc">
+                    <ul>
+                        <li>Demonstrated exceptional financial management and integrity, driving a £5,000 profit increase and enhancing overall operational performance through strategic fiscal responsibility</li>
+                        <li>Promoted from Co-Director of Events</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">EUTIC Club Project — Senior Financial Analyst</div>
+                <div class="card-meta">Sep 2022 - Mar 2023</div>
+                <div class="card-desc">
+                    <ul>
+                        <li>Responsible for stock screening using S&P Capital IQ along with various other websites and offering an investment thesis with a draft financial model to sector heads and society.</li>
+                        <li>Produced a team research report with Discounted Cash Flow (DCF), comparable valuations, potential growth strategies and regulatory risks impacting the EUTIC investment club portfolio.</li>
+                        <li>Pitched iShares Corporate Bond ETF by Blackrock to the investment committee and got it approved as a buy option for the 2023 EUTIC investment portfolio.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">University of Edinburgh Business School — Student Peer Support Leader (BizPALs)</div>
+                <div class="card-meta">May 2024 - June 2025</div>
+                <div class="card-desc">
+                    <ul>
+                        <li>Provide administrative support for day-to-day running of the schemes including coordination of peer support volunteers, liaising with peer leaders, collating attendance data and acting as ambassadors of peer support within the Business School. </li>
+                        <li>Be actively involved in peer support project initiation, reviews, recruitment, promotion, session planning, debriefs, professional development days and quality assurance measures in the business school. </li>
+                        <li> Forge connections with other stakeholders in peer support, including business school student societies and staff with a view to enhancing the undergraduate learning community. </li>
+                        <li> Promoted from Chair of SkillPALs</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <div class="card">
-        <div class="card-title">Edinburgh University Indian Society — Treasurer</div>
-        <div class="card-meta">Mar 2023 - May 2025</div>
-        <div class="card-desc">
-          <ul>
-            <li>Demonstrated exceptional financial management and integrity, driving a £5,000 profit increase and enhancing overall operational performance through strategic fiscal responsibility</li>
-            <li>Promoted from Co-Director of Events</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-title">EUTIC Club Project — Senior Financial Analyst</div>
-        <div class="card-meta">Sep 2022 - Mar 2023</div>
-        <div class="card-desc">
-          <ul>
-            <li>Responsible for stock screening using S&P Capital IQ along with various other websites and offering an investment thesis with a draft financial model to sector heads and society.</li>
-            <li>Produced a team research report with Discounted Cash Flow (DCF), comparable valuations, potential growth strategies and regulatory risks impacting the EUTIC investment club portfolio.</li>
-            <li>Pitched iShares Corporate Bond ETF by Blackrock to the investment committee and got it approved as a buy option for the 2023 EUTIC investment portfolio.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-title">University of Edinburgh Business School — Student Peer Support Leader (BizPALs)</div>
-        <div class="card-meta">May 2024 - June 2025</div>
-        <div class="card-desc">
-          <ul>
-            <li>Provide administrative support for day-to-day running of the schemes including coordination of peer support volunteers, liaising with peer leaders, collating attendance data and acting as ambassadors of peer support within the Business School. </li>
-            <li>Be actively involved in peer support project initiation, reviews, recruitment, promotion, session planning, debriefs, professional development days and quality assurance measures in the business school. </li>
-            <li> Forge connections with other stakeholders in peer support, including business school student societies and staff with a view to enhancing the undergraduate learning community. </li>
-            <li> Promoted from Chair of SkillPALs</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="education">
-    <h2>Education</h2>
-    <div class="content-grid">
-      <div class="card">
-        <div class="card-title">ESSEC Business School — MSc Sustainability Transformation</div>
-        <div class="card-meta">2025 – Present | Cergy, France</div>
-        <div class="card-desc"> 
-           <ul>
-            <li>Major in Finance and Auditing.</li>
-            <li>Advanced coursework in corporate sustainability, ESG frameworks, green finance, climate risk analysis, and circular economy principles.</li>
-          </ul>
-      </div>
-    </div>
-
-    <div class="card">
-        <div class="card-title">SATOR — CERTIFICAT DE SUIVI DE LA FORMATION, Energy Transition</div>
-        <div class="card-meta"> October 2025 | Cergy, France</div>
-        <div class="card-desc"> 
-           <ul>
-            <li>Completed an intensive (10 hours) online certification covering the fundamentals and strategic dimensions of the global energy transition. Topics included thermodynamics, energy efficiency, and the environmental impact of energy consumption.</li>
-            <li>Gained an in-depth understanding of:Renewable energy systems (solar, wind, hydro, biomass, biofuels, and biogas), Nuclear power (generation processes, safety, and industry challenges), Energy independence, resource criticality, and the variability of renewables, The role of hydrogen and low-carbon fuels in sustainable transitions, Urban and industrial energy use, transportation, and mobility challenges, Building renovation, digital and textile sector transformations, Energy policy, societal behavior, and the role of the state in transition
-
+    </section>
+    
+    <section id="education">
+        <h2>Education</h2>
+        <div class="content-grid">
+            <div class="card">
+                <div class="card-title">ESSEC Business School — MSc Sustainability Transformation</div>
+                <div class="card-meta">2025 – Present | Cergy, France</div>
+                <div class="card-desc">
+                    <ul>
+                        <li>Major in Finance and Auditing.</li>
+                        <li>Advanced coursework in corporate sustainability, ESG frameworks, green finance, climate risk analysis, and circular economy principles.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">SATOR — CERTIFICAT DE SUIVI DE LA FORMATION, Energy Transition</div>
+                <div class="card-meta">October 2025 | Cergy, France</div>
+                <div class="card-desc">
+                    <ul>
+                        <li>Completed an intensive (10 hours) online certification covering the fundamentals and strategic dimensions of the global energy transition. Topics included thermodynamics, energy efficiency, and the environmental impact of energy consumption.</li>
+                        <li>Gained an in-depth understanding of:Renewable energy systems (solar, wind, hydro, biomass, biofuels, and biogas), Nuclear power (generation processes, safety, and industry challenges), Energy independence, resource criticality, and the variability of renewables, The role of hydrogen and low-carbon fuels in sustainable transitions, Urban and industrial energy use, transportation, and mobility challenges, Building renovation, digital and textile sector transformations, Energy policy, societal behavior, and the role of the state in transition
 Developed the ability to assess energy sources through environmental, economic, and technical lenses while critically evaluating pathways toward a low-carbon future.</li>
-          </ul>
-      </div>
-    </div>
-      
-      <div class="card">
-        <div class="card-title">University of Edinburgh — Master of Arts with Honours in Business Management</div>
-        <div class="card-meta">September 2021 – July 2025 | Edinburgh, UK</div>
-        <div class="card-desc">
-           <ul>
-            <li>Graduated with Honours (2:1).</li>
-            <li>Dissertation: ESG Disclosure and Corporate Financial Performance: Sectoral and Regulatory Comparisons Between the UK and India (Quantitative Analysis)</li>
-          </ul>
-      </div>
-    </div>
-
-      <div class="card">
-        <div class="card-title">GD Goenka Public School</div>
-        <div class="card-meta">2019 – 2021 | Gurgaon, India</div>
-        <div class="card-desc"> 
-           <ul>
-            <li>Commerce (English, Mathematics, Business Studies, Economics, Accountancy)</li>
-            <li>Football School Team, Commerce Society</li>
-          </ul>
-      </div>
-    </div>
-
-      <div class="card">
-        <div class="card-title">Heritage Xperiential Learning School (Formerly known as The Heritage School, Gurgaon)</div>
-        <div class="card-meta">2007 – 2019 | Gurgaon, India</div>
-        <div class="card-desc"> 
-           <ul>
-            <li>Football School Team, Photography Society</li>
-          </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="content-grid">
-      <div class="card">
-        <div class="card-title">Dissertation: ESG Disclosure and Corporate Financial Performance: Sectoral and Regulatory Comparisons Between the UK and India (Quantitative Analysis)</div>
-        <div class="card-meta">2025 | Bloomberg Terminal, Stata, SPSS</div>
-        <div class="card-desc">
-          <ul>
-            <li>Advanced quantitative analysis exploring ESG disclosures influence on Corporate Financial Performance (CFP) across publicly listed Indian and UK firms.</li>
-            <li>Panel datasets covering 10 years.</li>
-            <li>Utilized premier financial data platforms, including Bloomberg Terminal, to evaluate sectoral and regulatory dynamics.</li>
-            <li>Revealed how material ESG factors and evolving regulatory frameworks shape Corporate Financial Performance (CFP) in emerging markets.</li>
-          </ul>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">University of Edinburgh — Master of Arts with Honours in Business Management</div>
+                <div class="card-meta">September 2021 – July 2025 | Edinburgh, UK</div>
+                <div class="card-desc">
+                    <ul>
+                        <li>Graduated with Honours (2:1).</li>
+                        <li>Dissertation: ESG Disclosure and Corporate Financial Performance: Sectoral and Regulatory Comparisons Between the UK and India (Quantitative Analysis)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">GD Goenka Public School</div>
+                <div class="card-meta">2019 – 2021 | Gurgaon, India</div>
+                <div class="card-desc">
+                    <ul>
+                        <li>Commerce (English, Mathematics, Business Studies, Economics, Accountancy)</li>
+                        <li>Football School Team, Commerce Society</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">Heritage Xperiential Learning School (Formerly known as The Heritage School, Gurgaon)</div>
+                <div class="card-meta">2007 – 2019 | Gurgaon, India</div>
+                <div class="card-desc">
+                    <ul>
+                        <li>Football School Team, Photography Society</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
-        <!-- Load More Projects Button -->
-    <div class="load-more">
-      <a href="projects.html" class="load-more-btn">Load More Projects</a>
-          </ul>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="content-grid">
+            <div class="card">
+                <div class="card-title">Dissertation: ESG Disclosure and Corporate Financial Performance: Sectoral and Regulatory Comparisons Between the UK and India (Quantitative Analysis)</div>
+                <div class="card-meta">2025 | Bloomberg Terminal, Stata, SPSS</div>
+                <div class="card-desc">
+                    <ul>
+                        <li>Advanced quantitative analysis exploring ESG disclosures influence on Corporate Financial Performance (CFP) across publicly listed Indian and UK firms.</li>
+                        <li>Panel datasets covering 10 years.</li>
+                        <li>Utilized premier financial data platforms, including Bloomberg Terminal, to evaluate sectoral and regulatory dynamics.</li>
+                        <li>Revealed how material ESG factors and evolving regulatory frameworks shape Corporate Financial Performance (CFP) in emerging markets.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="load-more">
+                <a href="projects.html" class="load-more-btn">Load More Projects</a>
+            </div>
         </div>
-       </div>
-  </section>
-
+    </section>
+    
     <section id="certifications">
-    <h2>Certifications</h2>
-    <div class="content-grid">
-      <div class="card">
-        <div class="card-title">Professional Development Business School Group Coaching Badge 2024-25</div>
-        <div class="card-meta">University of Edinburgh Business School</div>
-      </div>
-      <div class="card">
-        <div class="card-title">TASK - The Assessment for Sustainability Knowledge</div>
-        <div class="card-meta">Professional Certification</div>
-      </div>
-      <div class="card">
-        <div class="card-title">The Edinburgh Award for Effective and Responsible Leadership</div>
-        <div class="card-meta">Business School</div>
-      </div>
-      <div class="card">
-        <div class="card-title">The Edinburgh Award for Professional Development</div>
-        <div class="card-meta">University of Edinburgh</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="about-content" style="text-align: center;">
-      <p>Email: <a href="mailto:arnaverma07@gmail.com" style="color: var(--highlight);">arnaverma07@gmail.com</a></p>
-      <p style="margin-top: 1rem;">LinkedIn: <a href="https://www.linkedin.com/in/arnav-verma-270674239/" target="_blank" style="color: var(--highlight);">https://www.linkedin.com/in/arnav-verma-270674239/</a></p>
-      <p style="margin-top: 1rem;">Location: Cergy (Paris area), France</p>
-    </div>
-  </section>
-
-  <footer>
-    © 2025 Arnav Verma. All rights reserved.
-  </footer>
+        <h2>Certifications</h2>
+        <div class="content-grid">
+            <div class="card">
+                <div class="card-title">Professional Development Business School Group Coaching Badge 2024-25</div>
+                <div class="card-meta">University of Edinburgh Business School</div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">TASK - The Assessment for Sustainability Knowledge</div>
+                <div class="card-meta">Professional Certification</div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">The Edinburgh Award for Effective and Responsible Leadership</div>
+                <div class="card-meta">Business School</div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">The Edinburgh Award for Professional Development</div>
+                <div class="card-meta">University of Edinburgh</div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="about-content" style="text-align: center;">
+            <p>Email: <a href="mailto:arnaverma07@gmail.com" style="color: var(--highlight);">arnaverma07@gmail.com</a></p>
+            <p style="margin-top: 1rem;">LinkedIn: <a href="https://www.linkedin.com/in/arnav-verma-270674239/" target="_blank" style="color: var(--highlight);">https://www.linkedin.com/in/arnav-verma-270674239/</a></p>
+            <p style="margin-top: 1rem;">Location: Cergy (Paris area), France</p>
+        </div>
+    </section>
+    
+    <footer>
+        © 2025 Arnav Verma. All rights reserved.
+    </footer>
+    
+    <script>
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 0) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
