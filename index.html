@@ -219,53 +219,70 @@
             .hero-container { padding: 2rem; }
         }
 
-                .glass-button {
+        .glass-button {
             display: inline-block;
             padding: 1rem 2.5rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border: none;
+            background: rgba(255, 255, 255, 0.08);
+            border: 2px solid;
             border-radius: 50px;
             color: white;
             font-size: 1.1rem;
             font-weight: 600;
             text-align: center;
+            text-decoration: none;
             transition: all 0.3s ease;
             cursor: pointer;
-            box-shadow: 0 4px 15px 0 rgba(102, 126, 234, 0.4);
+            backdrop-filter: blur(5px);
         }
-        
+
         .glass-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px 0 rgba(102, 126, 234, 0.6);
+            backdrop-filter: blur(8px);
         }
-        
+
+        /* Mail button - Gmail/Google colors */
         .glass-button:nth-child(1) {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            box-shadow: 0 4px 15px 0 rgba(245, 87, 108, 0.4);
+            border-image: linear-gradient(135deg, #EA4335 0%, #FBBC04 33%, #4285F4 66%, #34A853 100%) 1;
+            box-shadow: 0 4px 15px 0 rgba(234, 67, 53, 0.3);
         }
-        
+
         .glass-button:nth-child(1):hover {
-            box-shadow: 0 6px 20px 0 rgba(245, 87, 108, 0.6);
+            box-shadow: 0 6px 20px 0 rgba(234, 67, 53, 0.5);
+            background: rgba(234, 67, 53, 0.1);
         }
-        
+
+        /* LinkedIn button - LinkedIn blue */
         .glass-button:nth-child(2) {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            box-shadow: 0 4px 15px 0 rgba(79, 172, 254, 0.4);
+            border-color: #0A66C2;
+            box-shadow: 0 4px 15px 0 rgba(10, 102, 194, 0.3);
         }
-        
+
         .glass-button:nth-child(2):hover {
-            box-shadow: 0 6px 20px 0 rgba(79, 172, 254, 0.6);
+            box-shadow: 0 6px 20px 0 rgba(10, 102, 194, 0.5);
+            background: rgba(10, 102, 194, 0.1);
         }
-        
+
+        /* GitHub button - Dark purple */
         .glass-button:nth-child(3) {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            box-shadow: 0 4px 15px 0 rgba(102, 126, 234, 0.4);
+            border-color: #6e5494;
+            box-shadow: 0 4px 15px 0 rgba(110, 84, 148, 0.3);
         }
-        
+
         .glass-button:nth-child(3):hover {
-            box-shadow: 0 6px 20px 0 rgba(102, 126, 234, 0.6);
+            box-shadow: 0 6px 20px 0 rgba(110, 84, 148, 0.5);
+            background: rgba(110, 84, 148, 0.1);
         }
-    </style>
+
+        /* Resume button - Grey */
+        .glass-button:nth-child(4) {
+            border-color: #6B7280;
+            box-shadow: 0 4px 15px 0 rgba(107, 114, 128, 0.3);
+        }
+
+        .glass-button:nth-child(4):hover {
+            box-shadow: 0 6px 20px 0 rgba(107, 114, 128, 0.5);
+            background: rgba(107, 114, 128, 0.1);
+        }    </style>
 </head>
 <body>
     <header id="mainHeader">
