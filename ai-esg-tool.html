@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'/>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+  <title>AI-Powered ESG Research & Risk Tool | Arnav Verma</title>
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0a0a0a;
+      --blue: #1a1a1a;
+      --teal: #20d9d2;
+      --turquoise: #20d9d2;
+      --light: #f5f5f5;
+      --highlight: #20d9d2;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #0a0a0a 0%, #0d2626 20%, #0d3838 40%, #116466 70%, #155e5e 100%);
+      background-size: 400% 400%;
+      background-attachment: fixed;
+      animation: gradientShift 30s ease infinite;
+      line-height: 1.6;
+      font-size: 0.98rem;
+      color: var(--light);
+    }
+
+    header {
+      background: linear-gradient(135deg, rgba(15,23,42,0.98) 0%, rgba(19,78,74,0.98) 50%, rgba(21,94,117,0.98) 100%);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid var(--turquoise);
+      margin-bottom: 3rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      border: 2px solid var(--turquoise);
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      background: transparent;
+    }
+
+    nav a {
+      color: var(--light);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover { color: var(--highlight); }
+
+    .project-hero {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+      background: rgba(32, 217, 210, 0.08);
+      border-radius: 15px;
+      padding: 3rem;
+      border: 2px solid var(--turquoise);
+    }
+
+    .project-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--highlight);
+      line-height: 1.3;
+    }
+
+    .badge-building {
+      display: inline-block;
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      background-color: rgba(255, 244, 206, 0.2);
+      color: #ffd700;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 1rem;
+      border: 2px solid #ffd700;
+    }
+
+    .project-meta {
+      font-size: 1rem;
+      color: var(--turquoise);
+      margin: 1.5rem 0;
+      font-weight: 600;
+    }
+
+    .project-hero p {
+      line-height: 1.8;
+      margin: 1.5rem 0;
+      font-size: 1.05rem;
+      color: var(--light);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 2.5rem;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      text-decoration: none;
+      color: var(--light);
+      background: rgba(32, 217, 210, 0.15);
+      border: 2px solid var(--turquoise);
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+
+    .back-link:hover {
+      background: rgba(32, 217, 210, 0.25);
+      transform: translateX(-5px);
+    }
+
+    footer {
+      background: linear-gradient(135deg, rgba(15,23,42,0.98) 0%, rgba(19,78,74,0.98) 50%, rgba(21,94,117,0.98) 100%);
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+      color: var(--light);
+    }
+
+    @media (max-width: 768px) {
+      .project-hero h1 { font-size: 2rem; }
+      .project-hero { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="project-hero">
+    <h1>AI-Powered ESG Research & Risk Tool</h1>
+    
+    <div class="badge-building">Currently Building</div>
+
+    <div class="project-meta">
+      Automated ESG Research Platform · Agentic AI Workflows · Real-Time Risk Analysis
+    </div>
+
+    <p>
+      Designing an agentic AI platform that continuously ingests ESG disclosures and news, automates risk extraction and analysis, and delivers audit-ready insights to reduce manual research effort and enhance decision-grade ESG data quality.
+    </p>
+
+    <p>
+      The tool is being architected to orchestrate multiple AI agents for document parsing, entity and risk tagging, controversy detection, and confidence scoring, allowing ESG analysts to focus on judgment rather than manual data collection.
+    </p>
+
+    <p>
+      Future iterations will integrate custom taxonomies, client-specific materiality maps, and human-in-the-loop review workflows to support both screening-level use cases and deep-dive ESG risk assessments across sectors.
+    </p>
+
+    <a class="back-link" href="index.html">← Back to Homepage</a>
+  </main>
+
+  <footer>
+    © 2025 Arnav Verma. All rights reserved.
+  </footer>
+</body>
+</html>
