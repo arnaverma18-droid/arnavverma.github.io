@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'/>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+    <title>AI Platform for Automated Environmental Verification & Climate Intelligence | Arnav Verma</title>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0a0a0a;
+            --blue: #1a1a1a;
+            --teal: #20d9d2;
+            --turquoise: #20d9d2;
+            --light: #f5f5f5;
+            --highlight: #20d9d2;
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #0d2626 20%, #0d3838 40%, #116466 70%, #155e5e 100%);
+            background-size: 400% 400%;
+            background-attachment: fixed;
+            animation: gradientShift 30s ease infinite;
+            line-height: 1.6;
+            font-size: 0.98rem;
+            color: var(--light);
+        }
+        header {
+            background: linear-gradient(135deg, rgba(15,23,42,0.98) 0%, rgba(19,78,74,0.98) 50%, rgba(21,94,117,0.98) 100%);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid var(--turquoise);
+            margin-bottom: 3rem;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            border: 2px solid var(--turquoise);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            background: transparent;
+        }
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: var(--highlight); }
+        .project-hero {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 3rem;
+            background: rgba(32, 217, 210, 0.08);
+            border-radius: 15px;
+            border: 2px solid var(--turquoise);
+        }
+        .project-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--highlight);
+            line-height: 1.3;
+        }
+        .badge-building {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            border-radius: 999px;
+            background-color: rgba(255, 244, 206, 0.2);
+            color: #ffd700;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-top: 1rem;
+            border: 2px solid #ffd700;
+        }
+        .project-meta {
+            font-size: 1rem;
+            color: var(--turquoise);
+            margin: 1.5rem 0;
+            font-weight: 600;
+        }
+        .project-hero h2 {
+            font-size: 1.3rem;
+            color: var(--highlight);
+            margin: 2rem 0 0.8rem 0;
+            border-bottom: 2px solid rgba(32, 217, 210, 0.3);
+            padding-bottom: 0.4rem;
+        }
+        .project-hero p {
+            line-height: 1.8;
+            margin: 1rem 0;
+            font-size: 1.05rem;
+            color: var(--light);
+        }
+        .project-hero ul {
+            margin: 0.8rem 0 1rem 1.5rem;
+        }
+        .project-hero ul li {
+            margin-bottom: 0.5rem;
+            line-height: 1.7;
+        }
+        .component-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.2rem 0;
+        }
+        .component-card {
+            background: rgba(32, 217, 210, 0.06);
+            border: 1px solid rgba(32, 217, 210, 0.25);
+            border-radius: 10px;
+            padding: 1.2rem;
+        }
+        .component-card h3 {
+            color: var(--highlight);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+        .component-card p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        .use-case-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin: 0.8rem 0;
+        }
+        .use-case-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            background: rgba(32, 217, 210, 0.05);
+            border-left: 3px solid var(--teal);
+            padding: 0.7rem 1rem;
+            border-radius: 0 6px 6px 0;
+        }
+        .use-case-item strong {
+            color: var(--highlight);
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 2.5rem;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            text-decoration: none;
+            color: var(--light);
+            background: rgba(32, 217, 210, 0.15);
+            border: 2px solid var(--turquoise);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        .back-link:hover {
+            background: rgba(32, 217, 210, 0.25);
+            transform: translateX(-5px);
+        }
+        footer {
+            background: linear-gradient(135deg, rgba(15,23,42,0.98) 0%, rgba(19,78,74,0.98) 50%, rgba(21,94,117,0.98) 100%);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            color: var(--light);
+        }
+        @media (max-width: 768px) {
+            .project-hero h1 { font-size: 1.8rem; }
+            .project-hero { padding: 1.5rem; }
+            .component-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-hero">
+        <h1>AI Platform for Automated Environmental Verification & Climate Intelligence</h1>
+        <p><strong>Independent Climate Technology & Sustainability Project</strong></p>
+        <div class="badge-building">Concept Stage</div>
+        <div class="project-meta">2026 | Python, AI/ML, Satellite Data, Carbon Markets, MRV</div>
+
+        <h2>&#127757; Project Overview</h2>
+        <p>
+            The goal is to build an AI-powered platform that automates the <strong>measurement, reporting, and verification (MRV)</strong> of environmental and carbon-related projects using satellite data, climate indicators, and artificial intelligence.
+        </p>
+        <p>
+            Current carbon markets and environmental projects face major challenges because verification processes are <strong>slow, expensive, and largely manual</strong>, often taking <strong>12&ndash;18 months</strong> and consuming a large portion of project costs. These inefficiencies slow down climate action, reduce trust in carbon credits, and limit investment into environmental projects.
+        </p>
+        <p>
+            This platform aims to solve that problem by creating an <strong>automated environmental intelligence system</strong> capable of analyzing ecosystems and generating credible verification evidence much faster and at a lower cost.
+        </p>
+
+        <h2>&#128161; Core Idea</h2>
+        <p>
+            Develop a <strong>multi-agent AI system</strong> that collects and analyzes environmental data from multiple sources to generate <strong>structured, verifiable environmental insights</strong> for carbon markets, climate projects, and sustainability stakeholders.
+        </p>
+        <p>The system would combine:</p>
+        <ul>
+            <li>Satellite imagery</li>
+            <li>Vegetation and land-use signals</li>
+            <li>Climate and environmental risk indicators</li>
+            <li>AI analysis and automated reporting</li>
+        </ul>
+        <p>to produce <strong>trusted environmental evidence</strong> that can support carbon credit validation, sustainability reporting, and climate investment decisions.</p>
+
+        <h2>&#9881;&#65039; How the System Works</h2>
+        <p>The platform operates through five AI components working together:</p>
+
+        <div class="component-grid">
+            <div class="component-card">
+                <h3>1. Environmental Data Collection</h3>
+                <p>Gathers satellite imagery and climate datasets to monitor ecosystems, land use, and environmental changes. Sources include vegetation indices, temperature, rainfall, and climate risk indicators.</p>
+            </div>
+            <div class="component-card">
+                <h3>2. AI-Based Environmental Analysis</h3>
+                <p>Computer vision and ML models detect patterns such as forest growth, deforestation, land degradation, ecosystem restoration, and climate-related risks.</p>
+            </div>
+            <div class="component-card">
+                <h3>3. Environmental Intelligence Generation</h3>
+                <p>Translates analytical results into structured insights: carbon sequestration estimates, ecosystem health indicators, climate vulnerability scores, and biodiversity trends.</p>
+            </div>
+            <div class="component-card">
+                <h3>4. Automated Verification & Evidence Creation</h3>
+                <p>Compiles results into verifiable environmental evidence supporting carbon credit validation, including verification reports, carbon impact estimates, and compliance documentation.</p>
+            </div>
+        </div>
+
+        <div class="component-card" style="margin-top: 1rem;">
+            <h3>5. Reporting & Decision Support</h3>
+            <p>Produces structured intelligence reports for carbon project developers, climate technology companies, ESG teams, governments, regulators, and climate investors to assess environmental impact faster and more reliably.</p>
+        </div>
+
+        <h2>&#127919; Key Objectives</h2>
+        <ul>
+            <li><strong>Reduce verification timelines</strong> from many months to a few weeks</li>
+            <li><strong>Lower MRV costs</strong> by automating evidence generation</li>
+            <li><strong>Enable near-real-time monitoring</strong> of ecosystems using satellite data</li>
+            <li><strong>Increase transparency and trust</strong> in environmental and carbon markets</li>
+            <li><strong>Support scalable climate finance and project development</strong></li>
+        </ul>
+
+        <h2>&#127758; Potential Applications</h2>
+        <div class="use-case-list">
+            <div class="use-case-item"><span><strong>Carbon credit project verification</strong> &mdash; Automated, data-backed validation of carbon sequestration claims</span></div>
+            <div class="use-case-item"><span><strong>Environmental monitoring</strong> &mdash; Ongoing tracking of restoration and conservation projects</span></div>
+            <div class="use-case-item"><span><strong>ESG reporting & sustainability impact tracking</strong> &mdash; Real-time environmental performance data</span></div>
+            <div class="use-case-item"><span><strong>Climate risk intelligence</strong> &mdash; Infrastructure and investment risk scoring</span></div>
+            <div class="use-case-item"><span><strong>Government & regulatory oversight</strong> &mdash; Scalable environmental compliance monitoring</span></div>
+            <div class="use-case-item"><span><strong>Due diligence for climate investors</strong> &mdash; Credible environmental evidence for investment decisions</span></div>
+        </div>
+
+        <h2>&#127775; Long-Term Vision</h2>
+        <p>
+            The long-term goal is to create a <strong>scalable environmental intelligence platform</strong> that makes climate data more transparent, automated, and accessible. By transforming raw satellite data into <strong>trusted, AI-generated environmental insights</strong>, the platform could help accelerate climate projects, improve market confidence, and unlock greater flows of climate finance globally.
+        </p>
+
+        <a class="back-link" href="index.html">&#8592; Back to Homepage</a>
+    </main>
+
+    <footer>
+        &copy; 2025 Arnav Verma. All rights reserved.
+    </footer>
+</body>
+</html>
