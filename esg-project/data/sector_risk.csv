@@ -1,0 +1,9 @@
+sector,carbon_intensity,water_intensity,carbon_label,water_label
+Energy,95,72,Very High,High
+Utilities,88,85,Very High,Very High
+Materials,75,78,High,High
+Technology,18,35,Low,Moderate
+Financials,12,10,Very Low,Very Low
+Consumer Staples,28,65,Moderate,High
+Healthcare,20,30,Low,Low
+Consumer Discretionary,32,40,Moderate,Moderate
