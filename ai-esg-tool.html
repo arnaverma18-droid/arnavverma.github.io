@@ -1,217 +1,326 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 <head>
-  <meta charset='utf-8'/>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
-  <title>AI-Powered ESG Research & Risk Tool | Arnav Verma</title>
-  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --navy: #0a0a0a;
-      --blue: #1a1a1a;
-      --teal: #20d9d2;
-      --turquoise: #20d9d2;
-      --light: #f5f5f5;
-      --highlight: #20d9d2;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ESG Climate & Water Risk Analysis | Arnav Verma</title>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0a0a0a;
+            --blue: #1a1a1a;
+            --teal: #20d9d2;
+            --turquoise: #20d9d2;
+            --light: #f5f5f5;
+            --highlight: #20d9d2;
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
 
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: linear-gradient(135deg, #0a0a0a 0%, #0d2626 20%, #0d3838 40%, #116466 70%, #155e5e 100%);
-      background-size: 400% 400%;
-      background-attachment: fixed;
-      animation: gradientShift 30s ease infinite;
-      line-height: 1.6;
-      font-size: 0.98rem;
-      color: var(--light);
-    }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #0d2626 20%, #0d3838 40%, #116466 70%, #155e5e 100%);
+            background-size: 400% 400%;
+            background-attachment: fixed;
+            animation: gradientShift 30s ease infinite;
+            line-height: 1.6;
+            font-size: 0.98rem;
+            color: var(--light);
+            padding: 0;
+        }
 
-    header {
-      background: linear-gradient(135deg, rgba(15,23,42,0.98) 0%, rgba(19,78,74,0.98) 50%, rgba(21,94,117,0.98) 100%);
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 2px solid var(--turquoise);
-      margin-bottom: 3rem;
-    }
+        header {
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(32, 217, 210, 0.2);
+        }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
-      border: 2px solid var(--turquoise);
-      padding: 1rem 2rem;
-      border-radius: 50px;
-      background: transparent;
-    }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 2rem;
+        }
 
-    nav a {
-      color: var(--light);
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
 
-    nav a:hover { color: var(--highlight); }
+        nav a:hover { color: var(--turquoise); }
 
-    .project-hero {
-      max-width: 900px;
-      margin: 3rem auto;
-      padding: 0 2rem;
-      background: rgba(32, 217, 210, 0.08);
-      border-radius: 15px;
-      padding: 3rem;
-      border: 2px solid var(--turquoise);
-    }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(32, 217, 210, 0.3);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
 
-    .project-hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: var(--highlight);
-      line-height: 1.3;
-    }
+        .hero {
+            background: var(--gradient);
+            padding: 60px 40px;
+            text-align: center;
+        }
 
-    .badge-building {
-      display: inline-block;
-      padding: 0.4rem 1rem;
-      border-radius: 999px;
-      background-color: rgba(255, 244, 206, 0.2);
-      color: #ffd700;
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-top: 1rem;
-      border: 2px solid #ffd700;
-    }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-    .project-meta {
-      font-size: 1rem;
-      color: var(--turquoise);
-      margin: 1.5rem 0;
-      font-weight: 600;
-    }
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-    .project-hero p {
-      line-height: 1.8;
-      margin: 1.5rem 0;
-      font-size: 1.05rem;
-      color: var(--light);
-    }
+        .main-content { padding: 50px 40px; }
 
-    .back-link {
-      display: inline-block;
-      margin-top: 2.5rem;
-      padding: 0.8rem 2rem;
-      font-size: 1rem;
-      text-decoration: none;
-      color: var(--light);
-      background: rgba(32, 217, 210, 0.15);
-      border: 2px solid var(--turquoise);
-      border-radius: 8px;
-      transition: all 0.3s ease;
-      font-weight: 600;
-    }
+        h2 {
+            font-size: 1.8rem;
+            color: var(--turquoise);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(32, 217, 210, 0.3);
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
 
-    .back-link:hover {
-      background: rgba(32, 217, 210, 0.25);
-      transform: translateX(-5px);
-    }
+        h3 {
+            color: var(--light);
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
 
-    footer {
-      background: linear-gradient(135deg, rgba(15,23,42,0.98) 0%, rgba(19,78,74,0.98) 50%, rgba(21,94,117,0.98) 100%);
-      text-align: center;
-      padding: 2rem;
-      margin-top: 4rem;
-      color: var(--light);
-    }
+        p { margin-bottom: 20px; text-align: justify; color: rgba(245, 245, 245, 0.9); }
 
-    @media (max-width: 768px) {
-      .project-hero h1 { font-size: 2rem; }
-      .project-hero { padding: 2rem 1.5rem; }
-    }
-  </style>
+        ul, ol { margin-left: 25px; margin-bottom: 25px; }
+
+        li { margin-bottom: 12px; color: rgba(245, 245, 245, 0.9); }
+
+        .dataset-box {
+            background: rgba(32, 217, 210, 0.05);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            border: 1px solid rgba(32, 217, 210, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid rgba(32, 217, 210, 0.1);
+        }
+
+        th { color: var(--turquoise); font-weight: 600; text-transform: uppercase; font-size: 0.85rem; }
+
+        .formula-card {
+            background: rgba(255, 193, 7, 0.05);
+            border-left: 4px solid #ffc107;
+            padding: 15px 20px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(32, 217, 210, 0.15);
+            color: var(--turquoise);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-right: 8px;
+            margin-bottom: 10px;
+            border: 1px solid var(--turquoise);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 30px;
+            background: transparent;
+            border: 2px solid var(--turquoise);
+            color: var(--turquoise);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .back-link:hover {
+            background: var(--turquoise);
+            color: var(--navy);
+            transform: translateX(-5px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: rgba(15, 23, 42, 0.9);
+            margin-top: 60px;
+            border-top: 1px solid rgba(32, 217, 210, 0.2);
+        }
+
+        strong { color: var(--turquoise); }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .container { margin: 20px; }
+            .main-content { padding: 30px 20px; }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html#about">About</a></li><br>
-        <li><a href="index.html#experience">Experience</a></li><br>
-        <li><a href="index.html#projects">Projects</a></li><br>
-        <li><a href="index.html#contact">Contact</a></li><br>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main class="project-hero">
-    AI-Powered ESG Research & Insight Hub</h1>
+    <div class="container">
+        <div class="hero">
+            <h1>🌍 ESG Climate & Water Risk Analysis</h1>
+            <p>Advanced Analytics Framework for Sustainable Investment Portfolios</p>
+        </div>
 
-    <p><strong>Independent Sustainability & Digital Transformation Project</strong></p>
+        <div class="main-content">
+            <h2>📊 Project Overview</h2>
+            <p>
+                This project develops a Python-based ESG analytics framework to estimate an investment portfolio's exposure to <strong>climate transition risk</strong> and <strong>water scarcity risk</strong>. While many ESG risk models focus primarily on carbon emissions, this analysis introduces a dual-risk framework that integrates both carbon intensity and water stress exposure.
+            </p>
+            <p>
+                The objective is to demonstrate how environmental risk data can be integrated into portfolio risk analysis, helping investors better understand sustainability-related exposures and make more informed allocation decisions.
+            </p>
 
-        <div class="badge-building">Currently building</div>
+            <h2>🎯 Project Objectives</h2>
+            <ol>
+                <li>Estimate carbon transition risk exposure of an investment portfolio</li>
+                <li>Measure water stress exposure across sectors and holdings</li>
+                <li>Identify sectors and companies contributing most to environmental risk</li>
+                <li>Calculate weighted environmental exposure based on portfolio allocation</li>
+                <li>Visualise how environmental risk is distributed across the portfolio</li>
+                <li>Evaluate how portfolio rebalancing can reduce sustainability risk</li>
+                <li>Demonstrate how ESG data can support more resilient investment decisions</li>
+            </ol>
 
-    <h2>📌 Project Overview</h2>
-    <p>
-      The ESG Research & Insight Hub is a design-forward, AI-enabled platform developed to bridge the "Interpretation Gap" in corporate sustainability reporting. While thousands of companies now publish ESG disclosures, these reports are often 200+ pages long, fragmented, and difficult for non-experts to analyze.
-    </p><br><br>
-    <p>
-      This project uses Agentic AI to synthesize complex disclosures into structured, actionable insights. Rather than just extracting data, the tool applies a custom "Consultant-Logic" framework to evaluate the significance of the findings, helping users identify transparency gaps and potential greenwashing.
-    </p><br><br>
+            <h2>📁 Dataset Description</h2>
+            <div class="dataset-box">
+                <h3>Portfolio Dataset</h3>
+                <p>Simulated portfolio containing 30 companies across 8 sectors.</p>
+                <table>
+                    <tr><th>Column</th><th>Description</th></tr>
+                    <tr><td>company</td><td>Company name</td></tr>
+                    <tr><td>sector</td><td>Industry sector classification</td></tr>
+                    <tr><td>portfolio_weight</td><td>Portfolio allocation weight</td></tr>
+                </table>
+            </div>
 
-    <h2>🔍 The Problem: The "Interpretation Gap"</h2>
-    <ul>
-      <li><strong>Information Overload:</strong> Sustainability reports are too long for quick manual review, leading to critical data being missed.</li><br><br>
-      <li><strong>Data Fragmentation:</strong> Relevant ESG news and controversies are often disconnected from the company's official claims.</li><br>
-      <li><strong>The "What Now?" Factor:</strong> Most tools show raw numbers but fail to explain what those numbers mean in the context of global standards (like CSRD or GRI) or industry benchmarks.</li><br>
-    </ul>
+            <div class="dataset-box">
+                <h3>Sector Risk Dataset</h3>
+                <p>Sector-level intensity metrics used as proxies for exposure.</p>
+                <table>
+                    <tr><th>Column</th><th>Description</th></tr>
+                    <tr><td>sector</td><td>Industry sector</td></tr>
+                    <tr><td>carbon_intensity</td><td>Estimated sector carbon intensity</td></tr>
+                    <tr><td>water_intensity</td><td>Estimated sector water intensity</td></tr>
+                </table>
+            </div>
 
-    <h2>🛠️ The Technical Architecture (No-Code Stack)</h2>
-    <p>This project demonstrates a high level of technical literacy by "chaining" professional AI tools into a seamless workflow:</p>
-    <ul>
-      <li><strong>The Brain (Agentic AI):</strong> Built using Flowise, orchestrating Gemini 3 Flash to act as an autonomous researcher that can plan tasks, search the web, and audit PDFs.</li><br>
-      <li><strong>The Model:</strong> Utilizes the Gemini 3 series for its industry-leading context window (1M+ tokens), allowing the AI to "read" entire 200-page reports without losing data continuity.</li><br>
-      <li><strong>The Library (Database):</strong> Airtable serves as the central repository, storing structured metrics and summaries for 50–100 initial firms to ensure high speed and data integrity.</li><br>
-      <li><strong>The Face (Interface):</strong> An interactive AI Research Assistant widget embedded directly into a personal GitHub Pages website, allowing for real-time user interaction.</li><br>
-    </ul>
+            <h2>🔬 Methodology</h2>
+            <ul>
+                <li>Load portfolio, sector intensity, and water stress datasets</li>
+                <li>Merge portfolio holdings with environmental intensity metrics</li>
+                <li>Calculate weighted carbon and water exposure for each company</li>
+                <li>Aggregate environmental exposure by company and sector</li>
+                <li>Visualize portfolio sustainability risk distribution</li>
+                <li>Perform scenario analysis through portfolio rebalancing</li>
+            </ul>
 
-    <h2>🚀 Methodology: The 2-Month Roadmap</h2>
-    <p>The project is built in two distinct phases to ensure the AI's logic is accurate and grounded in sustainability expertise.</p>
-    <p><strong>Phase 1: Human-in-the-Loop Curation (Month 1)</strong></p>
-    <ul>
-      <li>Manual audit of the "Top 50" firms using Google AI Studio.</li><br>
-      <li>Developing the "Consultant-Logic" prompts to identify specific red flags (e.g., missing Scope 3 emissions or vague Net Zero targets).</li><br>
-      <li>Establishing the baseline data library in Airtable.</li><br>
-    </ul>
-    <p><strong>Phase 2: Agentic Automation (Month 2)</strong></p>
-    <ul>
-      <li>Translating manual audit logic into Flowise workflows.</li><br>
-      <li>Enabling "Live Research" capabilities where the AI can audit firms outside the initial database on demand.</li><br>
-      <li>Final deployment and embedding of the tool onto the GitHub-hosted portfolio.</li><br>
-    </ul>
+            <h2>📐 Key Formulas</h2>
+            <div class="formula-card">
+                <strong>Carbon Exposure:</strong><br>
+                carbon_exposure = portfolio_weight × carbon_intensity
+            </div>
+            <div class="formula-card">
+                <strong>Water Exposure:</strong><br>
+                water_exposure = portfolio_weight × water_intensity × water_stress_index
+            </div>
+            <div class="formula-card">
+                <strong>Composite ESG Exposure:</strong><br>
+                composite_esg = carbon_exposure + (0.6 × water_exposure)
+            </div>
 
-    <h2>📈 Key Outcomes</h2>
-    <ul>
-      <li><strong>Efficiency:</strong> Reduces the time required for initial company ESG screening by approximately 80%.</li><br>
-      <li><strong>Clarity:</strong> Translates qualitative "fluff" into quantitative metrics and executive-level summaries.</li><br>
-      <li><strong>Scalability:</strong> Creates a repeatable framework that can be expanded to include thousands of firms across different sectors.</li><br>
-    </ul></p><a class="back-link" href="index.html">← Back to Homepage</a>
-  </main>
+            <h2>📈 Visualizations</h2>
+            <ul>
+                <li><strong>Sector ESG Exposure</strong> - Combined carbon and water exposure across sectors.</li>
+                <li><strong>Portfolio Allocation</strong> - Distribution of portfolio weight by sector.</li>
+                <li><strong>Top 10 Holdings</strong> - Companies contributing most to total ESG exposure.</li>
+                <li><strong>Rebalancing Comparison</strong> - Side-by-side risk reduction analysis.</li>
+                <li><strong>Carbon vs Water Risk</strong> - Bubble chart identifying high-risk quadrant holdings.</li>
+            </ul>
 
-  <footer>
-    © 2025 Arnav Verma. All rights reserved.
-  </footer>
+            <h2>🛠️ Tools & Technologies</h2>
+            <div>
+                <span class="badge">Python</span>
+                <span class="badge">Pandas</span>
+                <span class="badge">NumPy</span>
+                <span class="badge">Matplotlib</span>
+                <span class="badge">Jupyter Notebook</span>
+                <span class="badge">GitHub Pages</span>
+            </div>
+
+            <h2>💡 Key Insights</h2>
+            <ul>
+                <li>Environmental exposure is often concentrated in high-intensity sectors.</li>
+                <li>Carbon and water risks are not always correlated; carbon-only strategies may miss key risks.</li>
+                <li>Water-intensive sectors (beverages, utilities) face significant risk under scarcity.</li>
+                <li>Rebalancing toward lower-intensity sectors meaningfuly reduces portfolio risk.</li>
+            </ul>
+
+            <h2>🎓 Conclusion</h2>
+            <p>
+                This project demonstrates how carbon and water risk data can be integrated into portfolio analytics to identify sustainability-related exposures. The analysis highlights the importance of multi-dimensional ESG frameworks that extend beyond carbon emissions to incorporate broader resource risks.
+            </p>
+
+            <a href="projects.html" class="back-link">← Back to Projects</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Developed by <strong>Arnav Verma</strong> | MSc Sustainability Transformation, ESSEC Business School</p>
+    </header>
 </body>
 </html>
