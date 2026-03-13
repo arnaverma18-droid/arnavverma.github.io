@@ -352,6 +352,19 @@
                 <strong>Composite ESG Exposure:</strong><br>
                 composite_esg = carbon_exposure + (0.6 × water_exposure)
             </div>
+            
+            <div class="formula-card">
+                <strong>Carbon Pricing Scenario:</strong><br>
+                carbon_cost = carbon_exposure × carbon_price
+            </div>
+            <div class="formula-card">
+                <strong>Water Scarcity Cost Scenario:</strong><br>
+                water_cost = water_exposure × water_price
+            </div>
+            <div class="formula-card">
+                <strong>Environmental Risk Score:</strong><br>
+                risk_score = (0.7 × carbon_exposure) + (0.3 × water_exposure)
+            </div>
 
             <h2>📈 Visualizations</h2>
 <img src="https://raw.githubusercontent.com/arnaverma18-droid/esg-climate-water-risk-analysis/main/images/water_carbon_scatter.png" style="width:100%; border-radius:8px; margin-bottom:1rem;">
@@ -368,14 +381,65 @@
                 <span class="badge">Matplotlib</span>
                 <span class="badge">Jupyter Notebook</span>
                 <span class="badge">GitHub Pages</span>
+                                <span class="badge">HTML / CSS</span>
             </div>
+
+                        <h2>📂 Project Structure</h2>
+            <div class="formula-card" style="background: rgba(32, 217, 210, 0.03); border-left-color: var(--turquoise);">
+                <pre style="font-family: 'Courier New', monospace; font-size: 0.9rem; line-height: 1.6; color: rgba(245, 245, 245, 0.9);">
+water-carbon-risk-portfolio-analysis
+│
+├── data
+│   ├── portfolio_data.csv
+│   ├── sector_risk.csv
+│   └── water_stress.csv
+│
+├── notebook
+│   └── esg_portfolio_analysis.ipynb
+│
+├── images
+│   ├── sector_exposure_chart.png
+│   ├── portfolio_allocation.png
+│   ├── top_holdings.png
+│   ├── rebalancing_comparison.png
+│   ├── carbon_water_scatter.png
+│   ├── risk_heatmap.png
+│   └── risk_contribution.png
+│
+├── index.html
+└── README.md
+                </pre>
+            </div>
+
 
             <h2>💡 Key Insights</h2>
             <ul>
-                <li>Environmental exposure is often concentrated in high-intensity sectors.</li>
-                <li>Carbon and water risks are not always correlated; carbon-only strategies may miss key risks.</li>
-                <li>Water-intensive sectors (beverages, utilities) face significant risk under scarcity.</li>
-                <li>Rebalancing toward lower-intensity sectors meaningfuly reduces portfolio risk.</li>
+                <p>The analysis highlights several sustainability insights:</p>
+            <ul>
+                <li>Environmental exposure is often concentrated in a few carbon- and water-intensive sectors</li>
+                <li>Carbon-focused ESG models may overlook important water-related risks</li>
+                <li>Water-intensive industries such as beverages, agriculture, and utilities face significant operational risks under water scarcity</li>
+                <li>Portfolio rebalancing toward lower-intensity sectors can meaningfully reduce environmental risk exposure</li>
+                <li>Integrating multiple environmental metrics enables more robust ESG investment analysis</li>
+            </ul>
+
+            <h2>🚀 Future Improvements</h2>
+            <p>Possible extensions include:</p>
+            <ul>
+                <li>Integrating company-level emissions data</li>
+                <li>Incorporating real water stress datasets such as the Aqueduct Water Risk Atlas</li>
+                <li>Building interactive dashboards using Plotly or Power BI</li>
+                <li>Expanding the model to include biodiversity and supply chain risk</li>
+                <li>Implementing portfolio optimization with ESG constraints</li>
+            </ul>
+
+                            <h2>👨‍💻 Author</h2>
+            <div style="background: rgba(32, 217, 210, 0.05); border-radius: 12px; padding: 25px; margin: 20px 0; text-align: center;">
+                <h3 style="margin-bottom: 10px; color: var(--turquoise);">Arnav Verma</h3>
+                <p style="font-size: 1.05rem; margin-bottom: 8px;">Sustainability • Finance • ESG Analytics</p>
+                <p style="font-size: 0.95rem; color: rgba(245, 245, 245, 0.8);">Python | Data Analysis | Sustainable Finance | Climate Risk</p>
+            </div>
+
             </ul>
 
             <h2>🎓 Conclusion</h2>
