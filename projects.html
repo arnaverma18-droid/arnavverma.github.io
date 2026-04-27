@@ -13,10 +13,18 @@
       --light: #f5f5f5;
       --highlight: #20d9d2;
     }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+      background: linear-gradient(135deg, #0a0a0a 0%, #0d2626 20%, #0d3838 40%, #116466 70%, #155e5e 100%);
+      background-size: 400% 400%;
+      background-attachment: fixed;
+      animation: gradientShift 30s ease infinite;
       color: var(--light);
       line-height: 1.6;
       font-size: 0.98rem;
@@ -55,12 +63,9 @@
       </ul>
     </nav>
   </header>
-
-  <h1>All Projects</h1>
-
   <section>
+    <h1>All Projects</h1>
     <div class="content-grid">
-      <!-- Main Dissertation Project -->
       <div class="card">
         <div class="card-title">Dissertation: ESG Disclosure and Corporate Financial Performance: Sectoral and Regulatory Comparisons Between the UK and India (Quantitative Analysis)</div>
         <div class="card-desc">
@@ -72,9 +77,7 @@
           </ul>
         </div>
       </div>
-
-      <!-- Add more projects below -->
-                  <a href="Arnav Dissertation.pdf" target="_blank" class="back-btn">Download Dissertation PDF</a>
+      <a href="Arnav Dissertation.pdf" class="back-btn">Download Dissertation PDF</a>
       <div class="card">
         <div class="card-title">Project Title 2</div>
         <div class="card-meta">Date | Tools Used</div>
@@ -86,7 +89,6 @@
           </ul>
         </div>
       </div>
-
       <div class="card">
         <div class="card-title">Project Title 3</div>
         <div class="card-meta">Date | Tools Used</div>
@@ -98,17 +100,11 @@
           </ul>
         </div>
       </div>
-
-      <!-- You can add more project cards here following the same pattern -->
     </div>
-
-    <div style="text-align: center; margin-top: 3rem;">
-      <a href="index.html#projects" class="back-btn">Back to Home</a>
-    </div>
+    <a href="index.html#projects" class="back-btn">Back to Home</a>
   </section>
-
   <footer>
-    © 2025 Arnav Verma. All rights reserved.
+    <p>&copy; 2025 Arnav Verma. All rights reserved.</p>
   </footer>
 </body>
 </html>
